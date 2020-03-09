@@ -15,6 +15,7 @@ import java.time.LocalDate;
  * @version 1.0
  * @since <pre>mars 9, 2020</pre>
  */
+
 @DisplayName("Employe Test")
 public class EmployeTest {
 
@@ -42,21 +43,6 @@ public class EmployeTest {
 
     }
 
-   /* @Test
-    @DisplayName("Test Get Nombre Annee Anciennete Nplus2")
-    public void testGetNombreAnneeAncienneteNPlus2() throws Exception {
-        //DAte dans le futur
-
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now().plusYears(2));
-
-        //When
-        Integer nbAnnees = employe.getNombreAnneeAnciennete();
-
-        //Then
-        Assertions.assertThat(nbAnnees).isEqualTo(-2);
-    }*/
 
     //DATE D'aujourdhui => 0
     @Test
@@ -75,29 +61,6 @@ public class EmployeTest {
         Assertions.assertThat(nbAnnees).isEqualTo(0);
     }
 
-
-    //DATE D'aujourdhui => indéfinie =>0
-   /* @Test
-    @DisplayName("Test Get Nombre Annee Anciennete null")
-    public void testGetNombreAnneeAncienneteNull() throws Exception {
-        //DAte d'embauche indéfinie'
-
-        //Given
-        public Integer getNombreAnneeAnciennete() {
-            if (dateEmbauche != null && dateEmbauche.isBefore(LocalDate.now())) {
-                return LocalDate.now().getYear() - dateEmbauche.getyear();
-            }
-        }
-        Employe employe = new Employe();
-        employe.setDateEmbauche(null);
-
-        //When
-        Integer nbAnnees = employe.getNombreAnneeAnciennete();
-
-        //Then
-        Assertions.assertThat(nbAnnees).isNull();
-
-    }*/
 
     /**
      * Method: getNbConges()
