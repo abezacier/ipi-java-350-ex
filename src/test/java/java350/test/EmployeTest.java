@@ -20,79 +20,9 @@ import java.time.LocalDate;
 public class EmployeTest {
 
 
-    /**
-     * Method: getNombreAnneeAnciennete()
-     */
+  
 
-    //Employé dateDembauche avec date 2ans avant aujourdhui=>
-    //2 années d'anvinennété
-    @Test
-    @DisplayName("Test Get Nombre Annee Anciennete Nmoins2")
-    public void testGetNombreAnneeAncienneteNMoins2() throws Exception {
-        // TODO: Test goes here...
-
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now().minusYears(2));
-
-        //When
-        Integer nbAnnees = employe.getNombreAnneeAnciennete();
-
-        //Then
-        Assertions.assertThat(nbAnnees).isEqualTo(2);
-
-    }
-
-
-    //DATE D'aujourdhui => 0
-    @Test
-    @DisplayName("Test Get Nombre Annee Anciennete Date actuelle")
-    public void testGetNombreAnneeAncienneteN0() throws Exception {
-        //DAte d'aujourd'hui'
-
-        //Given
-        Employe employe = new Employe();
-        employe.setDateEmbauche(LocalDate.now());
-
-        //When
-        Integer nbAnnees = employe.getNombreAnneeAnciennete();
-
-        //Then
-        Assertions.assertThat(nbAnnees).isEqualTo(0);
-    }
-
-
-    /**
-     * Method: getNbConges()
-     */
-    @Test
-    @DisplayName("Test Get Nb Conges")
-    public void testGetNbConges() throws Exception {
-        // TODO: Test goes here...
-    }
-
-    /**
-     * Method: getNbRtt()
-     */
-    @Test
-    @DisplayName("Test Get Nb Rtt")
-    public void testGetNbRtt() throws Exception {
-        // TODO: Test goes here...
-    }
-
-    /**
-     * Method: getNbRtt(LocalDate d)
-     */
-    @Test
-    @DisplayName("Test Get Nb Rtt D")
-    public void testGetNbRttD() throws Exception {
-        // TODO: Test goes here...
-    }
-
-    /**
-     * Method: getPrimeAnnuelle()
-     */
-
+    
 //Use case : matricule manager,
 // et p = Entreprise.primeAnnuelleBase() * Entreprise.INDICE_PRIME_MANAGER + primeAnciennete;
     @ParameterizedTest
